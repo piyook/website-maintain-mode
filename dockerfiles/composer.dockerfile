@@ -2,4 +2,4 @@ FROM composer:latest
  
 WORKDIR /var/www/html
  
-ENTRYPOINT [ "composer", "--ignore-platform-reqs" ]
+## REMEMBER to run docker-compose run --rm composer <command> in order to use bind mount to local src file

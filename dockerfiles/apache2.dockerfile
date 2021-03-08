@@ -19,8 +19,3 @@ RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf
 # Enable mod_rewrite
 RUN a2enmod rewrite
 
-# RUN docker-php-ext-install pdo pdo_mysql
-
-# RUN addgroup -g 1000 development && adduser -G development -g development -s /bin/sh -D development
-
-# USER development

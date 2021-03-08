@@ -1,0 +1,273 @@
+/************** general document image styles *****************/
+
+body {
+  
+  font-family: 'Roboto', sans-serif;
+  background-color:#F1F2F3;
+}
+
+/***make container height 100% of the viewport height (vh) since its one page **/
+
+.container {
+  
+  
+  display:flex;
+  flex-direction: column;
+  width:100vw;
+  height:100vh;
+
+}
+
+
+/************** header image styles *****************/
+
+
+#maintain_header{
+  
+  height:540px;
+  width:100vw;
+  background-image:url(../../images/maintain_header.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  
+}
+
+/************** main headline styles *****************/
+
+#maintain_strap {
+  
+  background-color: #A0A0BF;
+  height:150px;
+  color:white;
+  font-size: 70px;
+  text-align: center;
+  
+}
+
+#maintain_strap_text {
+  
+  
+  margin-top: 25px;
+  
+}
+
+/************** main text box styles *****************/
+
+#maintain_text_box{
+  
+  font-size: 30px;
+  color: #B27A99;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height:390px;
+  text-align: center;
+}
+
+#maintain_message {
+  
+ 
+}
+
+
+/************** email message styles *****************/
+
+#email_message{
+  
+  font-size: 25px;
+  font-style: italic;
+  
+}
+
+/************** email input box and button styles *****************/
+
+#maintain_email_form{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 auto;
+}
+
+#maintain_input_box{
+  font-size:21px;
+}
+
+#maintain_input{
+  border-radius: 5px;
+  border: 1px solid #504F78;
+  color: #B3BCC4;
+  font-style: italic;
+  width:400px;
+  padding: 10px;
+}
+
+.maintain_submit_button{
+  border-radius: 5px;
+  border: 1px solid #504F78;
+  background-color: #504F78;
+  color: #F1F2F3;
+  transition:box-shadow 1s;
+  padding:10px;
+}
+
+
+/************** login  button styles *****************/
+
+#maintain_login_button {
+  
+  border-radius: 20px;
+  border: 1px solid #504F78;
+  color: #7876CF;
+  padding: 10px 20px 10px 20px;
+  font-style: italic;
+  font-size:21px;
+  transition:box-shadow 1s;
+  
+}
+
+/************** button hover effects *****************/
+
+#maintain_login_button:hover,  .maintain_submit_button:hover {
+  
+  cursor:pointer;
+  box-shadow:0px 0px 20px 5px #B27A99;
+  transition:box-shadow 1s;
+
+  
+}
+
+/************** login form styles *****************/
+
+#maintain_login_form_modal {
+  
+  width:400px;
+  height: 100px;
+  background-color:#F1F2F3;
+  border: 1px solid black;
+  border-radius: 5px;
+  position:absolute;
+  /****css to place modal at very center of screen ***/
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  
+  /*note that display:none to display:block will not animate - so we need to use opacity set to zero and this can be set to 1 in the script and transitioned */
+  
+  display:block;
+  z-index:2000;
+  opacity:0;
+  transition: opacity 1s ease-in-out;
+  
+}
+
+#maintain_login_form{
+  
+  position:relative;
+  top: 35px;
+  left: 25px;
+
+}
+
+#maintain_login_form_text_box{
+  
+  width:250px;
+  border-radius: 5px;
+  border: 1px solid #504F78;
+  color: #B3BCC4;
+  font-style: italic;
+  padding: 10px;
+  
+}
+
+
+/***** container grey screen for modal focus *************/
+
+#screen { 
+    opacity:0.8;
+    background-color:#ccc;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    
+    display:block;
+    z-index:-1000;
+    opacity:0;
+    transition: opacity 1s ease-in-out;
+}
+
+
+/***** site id and logo *************/
+
+#maintain_logo{
+  font-size:15px;
+}
+
+/************************ MEDIA QUERIES  ****************/
+
+
+/******* medium screens / tablets ***************/
+
+
+/******** small screens / phones ****************/
+
+
+@media only screen and (max-width:600px) {
+  
+/* Change header image height*/
+  
+/*
+  #maintain_header{
+    
+    height:400px;
+  }
+*/
+  
+/*Change font size of main message header*/
+  
+  #maintain_strap{
+    
+    font-size:55px;
+        }
+  
+/*Change font size of sub-message*/
+  
+  #maintain_message{
+    
+    font-size:80%;
+  }
+  
+  #email_message {
+    
+    font-size:60%;
+  }
+  
+/*  change email form diection to column for small screen */
+  #maintain_email_form{
+
+    flex-direction: column;
+
+          }
+  
+  /* change marging to make button lower down on small screen */
+  #maintain_input{
+    
+        margin-bottom: 15px;
+        }
+  
+}
+
+
+
+
+
+
+
+
+
