@@ -1,12 +1,13 @@
 <?php
 
-//load bootstrap.php and session_start() here
+//load bootstrap.php and session_start() here in site header of EACH page
+//******************************************************/
 
 session_start();
 
-require __DIR__ . "/../bootstrap.php";
+require __DIR__ . "/../maintain_src/bootstrap.php";
 
-
+//******************************************************/
 ?>
 
 <!DOCTYPE html>

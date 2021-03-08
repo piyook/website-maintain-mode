@@ -13,8 +13,8 @@
 
               if ($security_handler->ipCheck()){
                     
-                if (!$security_handler->timeCheck('email',15)) { 
-                  $error_message="Busy - Try Again in 2 minutes";
+                if (!$security_handler->timeCheck('email', THROTTLE_TIME)) { 
+                  $error_message="Busy - Try Again Soon";
                 } 
                 else 
                 {
@@ -97,11 +97,11 @@
   
                   if ($error_message == 'email sent OK') { ?>
           
-                      <img src="images/tick_green.png" height="60" width="60">
+                      <img src="maintain/images/tick_green.png" height="60" width="60">
                       
                       <?php } else { ?>
                       
-                      <img src="images/x_red.png" height="60" width="60">
+                      <img src="maintain/images/x_red.png" height="60" width="60">
                       
                       <?php } } ?>
           
